@@ -1,7 +1,7 @@
 # Happy Birthday Mia!
 
 * Clone this git repo
-* Load the Jupyter Notebook called `main`
+* Load the Jupyter Notebook called `main` in a Python2 notebook.
 * Compile the DNA
 
 Enjoy your special day.
