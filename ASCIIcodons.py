@@ -103,7 +103,7 @@ class TextToDNA:
         """
         Initialize TextToDNA object
         """
-        print "Initialized TextToDNA object."
+        print("Initialized TextToDNA object.")
 
     def translate(self, infile, outfile):
         """
@@ -112,19 +112,19 @@ class TextToDNA:
         template = open(infile)
         newfile = open(outfile, "w")
         
-        print "Translating ASCII text to DNA..."    
+        print("Translating ASCII text to DNA...")
         
         for line in self.translate_file_dna(template):
             newfile.write(line+"\n")
             newfile.flush()
             os.fsync(newfile.fileno())
-            print line
+            print(line)
             
         template.close()
         newfile.close()
         
-        print "File translation complete."
-        print "See " + outfile + " for results."
+        print("File translation complete.")
+        print("See " + outfile + " for results.")
 
     def text_to_dna(self, txtstr):
         """
@@ -148,7 +148,7 @@ class DNAToText:
         """
         Initialize DNAToText object
         """
-        print "Initialized DNAToText object."
+        print("Initialized DNAToText object.")
         
     def translate(self, infile, outfile):
         """
@@ -157,25 +157,25 @@ class DNAToText:
         template = open(infile)
         newfile = open(outfile, "w")
         
-        print "Translating DNA to ASCII text..."    
+        print("Translating DNA to ASCII text..."    )
         
         for line in self.translate_file_chr(template):
             newfile.write(line+"\n")
             newfile.flush()
             os.fsync(newfile.fileno())
-            print line
+            print(line)
             
         template.close()
         newfile.close()
         
-        print "File translation complete."
-        print "See " + outfile + " for results."
+        print("File translation complete.")
+        print("See " + outfile + " for results.")
 
     def chunkify(self, dna, n):
         """
         Split DNA into n-base codons
         """
-        for i in xrange(0, len(dna), n):
+        for i in range(0, len(dna), n):
             yield dna[i:i+n]
     
     def dna_to_text(self, dnastr):
